@@ -1,0 +1,29 @@
+"use client";
+import * as React from "react";
+
+interface BackButtonProps {
+  onClick?: () => void;
+}
+
+export const BackButton: React.FC<BackButtonProps> = ({ onClick }) => {
+  return (
+    <button
+      className="absolute top-8 h-[58px] left-[34px] w-[217px] max-md:top-5 max-md:left-5 max-md:h-12 max-md:w-[180px] max-sm:h-10 max-sm:left-[15px] max-sm:top-[15px] max-sm:w-[150px]"
+      onClick={onClick}
+      type="button"
+    >
+      <div className="absolute top-0 left-0 bg-zinc-300 h-[58px] rounded-[30px] w-[217px] max-md:h-12 max-md:rounded-3xl max-md:w-[180px] max-sm:h-10 max-sm:rounded-3xl max-sm:w-[150px]" />
+      <div>
+        <div
+          dangerouslySetInnerHTML={{
+            __html:
+              "<svg id=&quot;1505:657&quot; layer-name=&quot;Arrow 1&quot; width=&quot;45&quot; height=&quot;23&quot; viewBox=&quot;0 0 45 23&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;arrow-icon&quot; style=&quot;width: 43px; height: 20px; position: absolute; left: 14px; top: 21px&quot;> <path d=&quot;M45 11.5L13.5 11.5L2 11.5M2 11.5L13.5 21.25M2 11.5L13.5 1.75&quot; stroke=&quot;#507B6A&quot; stroke-width=&quot;2&quot;></path> </svg>",
+          }}
+        />
+      </div>
+      <span className="absolute text-4xl font-bold text-gray-500 h-[47px] left-[70px] top-[7px] w-[134px] max-md:top-2 max-md:h-8 max-md:text-3xl max-md:left-[55px] max-md:w-[110px] max-sm:top-1.5 max-sm:h-7 max-sm:text-2xl max-sm:left-[45px] max-sm:w-[90px]">
+        Kembali
+      </span>
+    </button>
+  );
+};
